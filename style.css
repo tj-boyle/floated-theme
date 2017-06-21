@@ -1,0 +1,162 @@
+/* line 1, sass/style.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-size: 100%;
+  font: inherit;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+/* line 1, sass/style.scss */
+body {
+  line-height: 1;
+}
+
+/* line 1, sass/style.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 1, sass/style.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 1, sass/style.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 1, sass/style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, sass/style.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 1, sass/style.scss */
+.clear {
+  clear: both;
+}
+
+/* line 2, sass/style.scss */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+/* line 9, sass/style.scss */
+header#header {
+  background-color: #ED1C24;
+}
+/* line 25, sass/neat/neat/mixins/_grid-container.scss */
+header#header #branding-wrapper::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 15, sass/style.scss */
+header#header #branding-wrapper #branding {
+  width: calc(66.66667% - 33.33333px);
+  float: left;
+  margin-left: 20px;
+  margin-left: calc(16.66667% - 23.33333px + 40px);
+}
+/* line 20, sass/style.scss */
+header#header #branding-wrapper #site-title, header#header #branding-wrapper #site-description, header#header #branding-wrapper #cta-text {
+  text-align: center;
+}
+/* line 24, sass/style.scss */
+header#header #branding-wrapper #site-title a {
+  color: #FFFFFF;
+  font-size: 7em;
+  text-decoration: none;
+}
+/* line 30, sass/style.scss */
+header#header #branding-wrapper #site-description {
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+/* line 36, sass/style.scss */
+header#header #branding-wrapper #site-cta {
+  margin-top: 49px;
+  margin-bottom: 49px;
+}
+/* line 40, sass/style.scss */
+header#header #branding-wrapper #site-cta #cta-text {
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+/* line 45, sass/style.scss */
+header#header #branding-wrapper #site-cta #cta-input {
+  margin: 0 auto;
+  width: 50%;
+}
+/* line 49, sass/style.scss */
+header#header #branding-wrapper #site-cta #cta-input input {
+  border: none;
+  outline: none;
+  padding: none;
+  line-height: 28px;
+}
+/* line 56, sass/style.scss */
+header#header #branding-wrapper #site-cta #cta-input input[type='email'] {
+  width: 70%;
+  padding-left: 6px;
+}
+/* line 61, sass/style.scss */
+header#header #branding-wrapper #site-cta #cta-input input[type='button'] {
+  width: calc(30% - 12px);
+  padding-left: 0px;
+  padding-right: 0px;
+  text-transform: uppercase;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+/* line 74, sass/style.scss */
+header#header #search {
+  display: none;
+}
+/* line 78, sass/style.scss */
+header#header div.menu {
+  padding-bottom: 14px;
+}
+/* line 25, sass/neat/neat/mixins/_grid-container.scss */
+header#header div.menu::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 82, sass/style.scss */
+header#header div.menu ul {
+  width: calc(66.66667% - 33.33333px);
+  float: left;
+  margin-left: 20px;
+  margin-left: calc(16.66667% - 23.33333px + 40px);
+  text-align: center;
+}
+/* line 88, sass/style.scss */
+header#header div.menu li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 7px;
+}
+/* line 94, sass/style.scss */
+header#header div.menu li a {
+  padding: 5px 7px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+/* line 101, sass/style.scss */
+header#header div.menu li:hover a {
+  background-color: #FFFFFF;
+  color: #000000;
+}
