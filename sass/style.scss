@@ -2,6 +2,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}.screen-reader-text{clip:rect(1px, 1px, 1px, 1px);position:absolute !important}
 
 @import "neat/neat";
+@import "compass/css3";
 
 $primaryColor: #ED1C24;
 
@@ -106,3 +107,80 @@ header#header{
 		}
 	}
 }
+
+// Stylization for posts on the main or category pages, not singular
+body.home{
+	section#content{
+		@include grid-container;	
+		
+		article{
+			@include grid-column(8);
+			@include grid-push(2);
+
+			margin-top: 20px;
+			margin-bottom: 20px;
+
+			.entry-words{
+				.cat-links a{ 
+					font-size: 36px;
+					text-transform: uppercase;
+					text-decoration: none;
+					color: $primaryColor; 
+				}
+
+				.entry-title a{
+					font-size: 45px;
+					text-transform: upper-alpha;
+					text-decoration: none;
+					color: #000000;
+				}
+			}
+
+			.entry-thumbnail{
+				img{
+					max-width:100%;
+					height: auto;
+				}
+			}
+
+			.entry-footer, .entry-meta{
+				display: none;
+			}
+
+			&.category-music{
+
+				.entry-header, .entry-words{ text-align: right; }
+				.entry-thumbnail{
+					@include grid-column(7);
+					@include box-shadow(rgba(0,0,0,0.5) 0px 5px 15px 0px);
+					float: right;
+					padding: 20px;
+					box-sizing: border-box;
+			
+				}
+
+				.entry-words{
+					@include grid-column(5);
+				}
+			}
+
+			&.category-art{
+				padding-top: 20px;
+				padding-bottom: 20px;
+				
+				@include box-shadow(rgba(0,0,0,0.5) 0px 5px 15px 0px);
+				
+				.entry-header, .entry-words, .entry-thumbnail{
+					@include grid-column(12);
+				}
+
+			}
+		}
+	}
+
+	aside#sidebar{
+		display: none;
+	} 
+}
+
+
