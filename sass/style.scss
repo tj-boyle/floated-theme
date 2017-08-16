@@ -88,7 +88,7 @@ header#header{
 		display: none;
 	}	
 
-	div.menu{
+	nav#menu{
 		@include grid-container;
 		padding-bottom: 14px;
 
@@ -110,7 +110,7 @@ header#header{
 				color: #FFFFFF;
 			}
 
-			&:hover, &.current_page_item{
+			&:hover, &.current-menu-item{
 				a{ 
 					background-color: #FFFFFF;
 					color: #000000;
@@ -126,7 +126,7 @@ header#header{
 	    font-size: 45px;
 	    text-transform: capitalize;
 	    text-decoration: none;
-	    color: #000000;
+	    color: #464646;
 	}
 }
 
@@ -161,6 +161,17 @@ body.home{
 				display: none;
 			}
 
+			p{
+				margin: 7px 0px;
+			    font: normal normal normal 13px/1.3em 'Open Sans',sans-serif;
+				color: #464646;
+				letter-spacing: normal;
+
+				img{
+					display: none;
+				}
+			}
+		
 			&.category-music{
 
 				.entry-header, .entry-words{ text-align: right; }
@@ -197,6 +208,63 @@ body.home{
 	} 
 }
 
+// Stylization for category list
+body.category{
+	#container{
+		@include grid-container;
+	}
+
+	section#content{
+		@include grid-column(6);
+		@include grid-push(3);
+	}
+
+	.header{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-size: 45px;
+	    text-transform: capitalize;
+	    text-decoration: none;
+	    color: #464646;
+	}
+
+	.entry{
+		margin-top: 20px;
+		margin-bottom: 60px;
+	}
+
+	.entry-thumbnail{
+		img{
+			max-width:100%;
+			
+			width: auto;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+		
+	.entry-footer, .entry-meta{
+		display: none;
+	}
+	
+
+	p{
+		margin: 7px 0px;
+	    font: normal normal normal 13px/1.3em 'Open Sans',sans-serif;
+		color: #464646;
+		letter-spacing: normal;
+
+		img{
+			display: none;
+		}
+	}
+
+	#comments, #footer, #sidebar{
+	 	display: none; 
+	}
+}
+
 // Stylization for individual posts
 body.single{
 	section.entry-content{
@@ -217,23 +285,41 @@ body.single{
 			@include grid-container;
 		}
 
-		.entry-words, .entry-links{
-			@include grid-column(6);
-			@include grid-push(3);
-		}
+		
 
 		.entry-words{
 			margin-top: 21px;
 			margin-bottom: 21px;
 		}
 
-		.entry-title{
-			margin-bottom: 14px;
+		.entry-header{ 
+			margin-bottom: 20px;
+
+			.entry-title{
+				margin-bottom: 14px;
+			}
 		}
 
 		p{
 			margin: 7px 0px;
+		    font: normal normal normal 13px/1.3em 'Open Sans',sans-serif;
+    		color: #464646;
+    		letter-spacing: normal;
+
+    		img{
+			    margin: 0 auto;
+		  		display: block;
+    		}
 		}
+	}
+
+	.entry-words, .entry-links, .entry-footer, .footer{
+		@include grid-column(6);
+		@include grid-push(3);
+	}
+
+	#comments, #footer, #sidebar{
+	 	display: none; 
 	}
 }
 

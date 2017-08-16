@@ -139,17 +139,17 @@ header#header #search {
   display: none;
 }
 /* line 91, sass/style.scss */
-header#header div.menu {
+header#header nav#menu {
   padding-bottom: 14px;
 }
 /* line 25, sass/neat/neat/mixins/_grid-container.scss */
-header#header div.menu::after {
+header#header nav#menu::after {
   clear: both;
   content: "";
   display: block;
 }
 /* line 95, sass/style.scss */
-header#header div.menu ul {
+header#header nav#menu ul {
   width: calc(66.66667% - 33.33333px);
   float: left;
   margin-left: 20px;
@@ -157,20 +157,20 @@ header#header div.menu ul {
   text-align: center;
 }
 /* line 101, sass/style.scss */
-header#header div.menu li {
+header#header nav#menu li {
   display: inline-block;
   text-transform: uppercase;
   font-weight: bold;
   margin: 0 7px;
 }
 /* line 107, sass/style.scss */
-header#header div.menu li a {
+header#header nav#menu li a {
   padding: 5px 7px;
   text-decoration: none;
   color: #FFFFFF;
 }
 /* line 114, sass/style.scss */
-header#header div.menu li:hover a, header#header div.menu li.current_page_item a {
+header#header nav#menu li:hover a, header#header nav#menu li.current-menu-item a {
   background-color: #FFFFFF;
   color: #000000;
 }
@@ -180,7 +180,7 @@ header#header div.menu li:hover a, header#header div.menu li.current_page_item a
   font-size: 45px;
   text-transform: capitalize;
   text-decoration: none;
-  color: #000000;
+  color: #464646;
 }
 
 /* line 25, sass/neat/neat/mixins/_grid-container.scss */
@@ -215,11 +215,22 @@ body.home section#content article .entry-thumbnail img {
 body.home section#content article .entry-footer, body.home section#content article .entry-meta {
   display: none;
 }
-/* line 166, sass/style.scss */
+/* line 164, sass/style.scss */
+body.home section#content article p {
+  margin: 7px 0px;
+  font: normal normal normal 13px/1.3em 'Open Sans',sans-serif;
+  color: #464646;
+  letter-spacing: normal;
+}
+/* line 170, sass/style.scss */
+body.home section#content article p img {
+  display: none;
+}
+/* line 177, sass/style.scss */
 body.home section#content article.category-music .entry-header, body.home section#content article.category-music .entry-words {
   text-align: right;
 }
-/* line 167, sass/style.scss */
+/* line 178, sass/style.scss */
 body.home section#content article.category-music .entry-thumbnail {
   width: calc(58.33333% - 31.66667px);
   float: left;
@@ -231,13 +242,13 @@ body.home section#content article.category-music .entry-thumbnail {
   padding: 20px;
   box-sizing: border-box;
 }
-/* line 176, sass/style.scss */
+/* line 187, sass/style.scss */
 body.home section#content article.category-music .entry-words {
   width: calc(41.66667% - 28.33333px);
   float: left;
   margin-left: 20px;
 }
-/* line 181, sass/style.scss */
+/* line 192, sass/style.scss */
 body.home section#content article.category-art {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -245,18 +256,73 @@ body.home section#content article.category-art {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px 0px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px 0px;
 }
-/* line 187, sass/style.scss */
+/* line 198, sass/style.scss */
 body.home section#content article.category-art .entry-header, body.home section#content article.category-art .entry-words, body.home section#content article.category-art .entry-thumbnail {
   width: calc(100% - 40px);
   float: left;
   margin-left: 20px;
 }
-/* line 195, sass/style.scss */
+/* line 206, sass/style.scss */
 body.home aside#sidebar {
   display: none;
 }
 
-/* line 204, sass/style.scss */
+/* line 25, sass/neat/neat/mixins/_grid-container.scss */
+body.category #container::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 217, sass/style.scss */
+body.category section#content {
+  width: calc(50% - 30px);
+  float: left;
+  margin-left: 20px;
+  margin-left: calc(25% - 25px + 40px);
+}
+/* line 222, sass/style.scss */
+body.category .header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 45px;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #464646;
+}
+/* line 231, sass/style.scss */
+body.category .entry {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+/* line 237, sass/style.scss */
+body.category .entry-thumbnail img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* line 247, sass/style.scss */
+body.category .entry-footer, body.category .entry-meta {
+  display: none;
+}
+/* line 252, sass/style.scss */
+body.category p {
+  margin: 7px 0px;
+  font: normal normal normal 13px/1.3em 'Open Sans',sans-serif;
+  color: #464646;
+  letter-spacing: normal;
+}
+/* line 258, sass/style.scss */
+body.category p img {
+  display: none;
+}
+/* line 263, sass/style.scss */
+body.category #comments, body.category #footer, body.category #sidebar {
+  display: none;
+}
+
+/* line 272, sass/style.scss */
 body.single section.entry-content .entry-thumbnail .thumbnail-div {
   max-width: 100%;
   height: 500px;
@@ -273,23 +339,39 @@ body.single section.entry-content .entry-container::after {
   content: "";
   display: block;
 }
-/* line 220, sass/style.scss */
-body.single section.entry-content .entry-words, body.single section.entry-content .entry-links {
+/* line 290, sass/style.scss */
+body.single section.entry-content .entry-words {
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
+/* line 295, sass/style.scss */
+body.single section.entry-content .entry-header {
+  margin-bottom: 20px;
+}
+/* line 298, sass/style.scss */
+body.single section.entry-content .entry-header .entry-title {
+  margin-bottom: 14px;
+}
+/* line 303, sass/style.scss */
+body.single section.entry-content p {
+  margin: 7px 0px;
+  font: normal normal normal 13px/1.3em 'Open Sans',sans-serif;
+  color: #464646;
+  letter-spacing: normal;
+}
+/* line 309, sass/style.scss */
+body.single section.entry-content p img {
+  margin: 0 auto;
+  display: block;
+}
+/* line 316, sass/style.scss */
+body.single .entry-words, body.single .entry-links, body.single .entry-footer, body.single .footer {
   width: calc(50% - 30px);
   float: left;
   margin-left: 20px;
   margin-left: calc(25% - 25px + 40px);
 }
-/* line 225, sass/style.scss */
-body.single section.entry-content .entry-words {
-  margin-top: 21px;
-  margin-bottom: 21px;
-}
-/* line 230, sass/style.scss */
-body.single section.entry-content .entry-title {
-  margin-bottom: 14px;
-}
-/* line 234, sass/style.scss */
-body.single section.entry-content p {
-  margin: 7px 0px;
+/* line 321, sass/style.scss */
+body.single #comments, body.single #footer, body.single #sidebar {
+  display: none;
 }
