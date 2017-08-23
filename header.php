@@ -30,6 +30,7 @@
 				<div id="search">
 					<?php get_search_form(); ?>
 				</div>
+				<div class="logo-thumb">F</div>
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 			</nav>
 		</header>
