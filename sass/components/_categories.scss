@@ -1,0 +1,99 @@
+
+// Stylization for category list
+body.category{
+	#container{
+		@include grid-container;
+	}
+
+	section#content{
+		@include grid-column(6);
+		@include grid-push(3);
+	}
+
+	.header{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-size: 45px;
+	    text-transform: capitalize;
+	    text-decoration: none;
+	    color: #464646;
+	}
+
+	.entry{
+		margin-top: 20px;
+		margin-bottom: 60px;
+	}
+
+	.cat-links{
+		display: none;
+	}
+
+	.entry-thumbnail{
+		margin-bottom: 10px;
+
+		img{
+			max-width:100%;
+			width: auto;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+		
+	.entry-footer, .entry-meta{
+		display: none;
+	}
+	
+
+	p{
+		margin: 7px 0px;
+	    font: normal normal normal 13px/1.3em 'Open Sans',sans-serif;
+		color: #464646;
+		letter-spacing: normal;
+
+		img{
+			display: none;
+		}
+	}
+
+	#comments, #footer, #sidebar{
+	 	display: none; 
+	}
+}
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+    /* add code here */
+    body.category{
+		section#content{
+			@include grid-column(10);
+			@include grid-push(1);
+		}
+	}
+}
+
+/* Tablet Portrait size to standard #{strip-units(960)} (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    /* add code here */
+    body.category{
+		section#content{
+			@include grid-column(12);
+		}
+	}
+}
+
+@media only screen and (min-width: $tabletWidth) and (max-width: 959px) {
+    /* add code here */
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+    /* add code here */
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    /* add code here */
+}

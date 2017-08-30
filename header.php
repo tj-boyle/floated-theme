@@ -14,7 +14,7 @@
 				<section id="branding">
 					<div id="site-title">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
-							<div id="logo"></div>
+							<img width="728" height="265" src="<?php bloginfo('template_url'); ?>/images/floated-white.png">
 						</a>
 					</div>
 					<div id="site-cta">
@@ -30,7 +30,7 @@
 				<div id="search">
 					<?php get_search_form(); ?>
 				</div>
-				<div class="logo-thumb">F</div>
+				<img src="<?php bloginfo('template_url'); ?>/images/floated-icon.png" class="logo-thumb">
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 			</nav>
 		</header>

@@ -24,6 +24,7 @@
 		<?php if (has_post_thumbnail() && $sliderNum === -1):?>
 			<div class="entry-thumbnail">
 				<div class="thumbnail-div" style="background-image: url('<?php echo(get_the_post_thumbnail_url(null, [768,282])); ?>') "></div>
+				<img class="thumbnail-img" src="<?php echo(get_the_post_thumbnail_url(null, [768,282]));?>">
 			</div>
 		<?php endif;?>
 		<div class="entry-container">

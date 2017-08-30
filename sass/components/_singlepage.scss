@@ -1,0 +1,132 @@
+
+// Stylization for individual posts
+body.single{
+	section.entry-content{
+		.entry-thumbnail{
+			.thumbnail-div{
+			    max-width: 100%;
+			    height: 500px;
+			    background-position: center 0%;
+			    background-repeat: no-repeat;
+			    background-origin: border-box;
+			    background-attachment: fixed;
+			    background-size: 100%;
+			    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px 0px;
+			}
+
+			.thumbnail-img{
+				display: none;
+				width: auto;
+			    height: auto;
+			    max-width: 100%;
+			}
+		}
+
+		.entry-container{
+			@include grid-container;
+		}
+
+		
+
+		.entry-words{
+			margin-top: 21px;
+			margin-bottom: 21px;
+		}
+
+		.entry-header{ 
+			margin-bottom: 20px;
+
+			.entry-title{
+				margin-bottom: 14px;
+			}
+		}
+
+		p{
+			margin: 7px 0px;
+		    font: normal normal normal 13px/1.3em 'Open Sans',sans-serif;
+    		color: #464646;
+    		letter-spacing: normal;
+
+    		img{
+			    margin: 0 auto;
+		  		display: block;
+    		}
+		}
+	}
+
+	.entry-words, .entry-links, .entry-footer, .footer{
+		@include grid-column(6);
+		@include grid-push(3);
+	}
+
+	#comments, #footer, #sidebar{
+	 	display: none; 
+	}
+}
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+    /* add code here */
+	body.single{
+		section.entry-content{
+			.entry-thumbnail{
+				.thumbnail-div{
+				    height: 300px;
+				}
+			}
+			
+
+			.entry-words, .entry-links, .entry-footer, .footer{
+				@include grid-column(8);
+				@include grid-push(2);
+			}
+		}
+	}
+}
+
+/* Tablet Portrait size to standard #{strip-units(960)} (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    /* add code here */
+	body.single{
+		section.entry-content{
+			.entry-thumbnail{
+				.thumbnail-div{ 
+					display: none; 
+				}
+
+				.thumbnail-img{
+					display: block;
+				}
+			}
+
+			.entry-words, .entry-links, .entry-footer, .footer{
+				@include grid-column(10);
+				@include grid-push(1);
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $tabletWidth) and (max-width: 959px) {
+    /* add code here */
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+    /* add code here */
+	body.single{
+		section.entry-content{
+			.entry-words, .entry-links, .entry-footer, .footer{
+				@include grid-column(10);
+				@include grid-push(1);
+			}
+		}
+	}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    /* add code here */
+}
