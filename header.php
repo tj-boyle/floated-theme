@@ -19,10 +19,7 @@
 					</div>
 					<div id="site-cta">
 						<p id="cta-text">Stay on Top</p>
-						<div id="cta-input">
-							<input type="email" placeholder="Your email here..."/>
-							<input type="button" value="Go!"/>
-						</div>
+						<?php echo do_shortcode('[mc4wp_form id="61"]'); ?>
 					</div>
 				</section>
 			</div>

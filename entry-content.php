@@ -27,10 +27,11 @@
 				<img class="thumbnail-img" src="<?php echo(get_the_post_thumbnail_url(null, [768,282]));?>">
 			</div>
 		<?php endif;?>
+
 		<div class="entry-container">
 			<div class="entry-words">
 				<div class="entry-header">
-						<h1 class="entry-title">
+					<h1 class="entry-title">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
 							<?php the_title(); ?>
 						</a>
@@ -57,6 +58,9 @@
 				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
 					<?php the_title(); ?>
 				</a>
+				<div class="border-wrapper">
+					<div class="border-bottom transition-right"></div>
+				</div>
 			</h1>
 			<?php the_excerpt();?>
 		</div>

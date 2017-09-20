@@ -1,12 +1,11 @@
 $fa-font-path: "fonts" !default;
-$primaryColor: #ED1C24;
 
 
 @import "neat/neat";
 @import "compass/css3";
 @import "font-awesome/scss/font-awesome";
 
-@import "variables/widthvars";
+@import "variables/vars";
 
 @import "mixins/breakpoints";
 

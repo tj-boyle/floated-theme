@@ -56,14 +56,27 @@ header#header{
 					padding-left: 6px;
 				}
 
-				input[type='button']{
+				input[type='submit']{
 					width: calc(30% - 12px);
 					padding-left: 0px;
 					padding-right: 0px;
 					text-transform: uppercase;
 					background-color: #000000;
 					color: #FFFFFF;
+					cursor: pointer;
+
+					&:hover{
+						background-color: #5c5c5c;
+					}
 				}
+			}
+
+			.mc4wp-response{
+			    padding-top: 16px;
+			    position: absolute;
+			    width: 100%;
+			    left: 0px;
+			    text-align: center;
 			}
 		}
 	}
